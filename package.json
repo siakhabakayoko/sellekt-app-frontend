@@ -1,0 +1,49 @@
+{
+  "name": "sello",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "@squircle-js/react": "^1.2.17",
+    "@tinymce/tinymce-react": "^6.1.0",
+    "@tiptap/extension-color": "^2.11.7",
+    "@tiptap/extension-highlight": "^2.11.7",
+    "@tiptap/extension-image": "^2.11.7",
+    "@tiptap/extension-link": "^2.11.7",
+    "@tiptap/extension-table": "^2.11.7",
+    "@tiptap/extension-table-cell": "^2.11.7",
+    "@tiptap/extension-table-header": "^2.11.7",
+    "@tiptap/extension-table-row": "^2.11.7",
+    "@tiptap/extension-text-align": "^2.11.7",
+    "@tiptap/react": "^2.11.7",
+    "@tiptap/starter-kit": "^2.11.7",
+    "next": "14.1.0",
+    "next-auth": "^4.24.11",
+    "prisma": "^6.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.3.8",
+    "react-hook-form": "^7.55.0",
+    "react-hot-toast": "^2.5.2",
+    "react-icons": "^5.5.0",
+    "react-player": "^2.16.0",
+    "react-quill": "^2.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^9",
+    "eslint-config-next": "14.1.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
