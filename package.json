@@ -11,7 +11,8 @@
   "dependencies": {
     "@prisma/client": "^6.6.0",
     "@squircle-js/react": "^1.2.17",
-    "@tinymce/tinymce-react": "^6.1.0",
+    "@tanstack/react-table": "^8.21.3",
+    "@tinymce/tinymce-react": "^6.2.0",
     "@tiptap/extension-color": "^2.11.7",
     "@tiptap/extension-highlight": "^2.11.7",
     "@tiptap/extension-image": "^2.11.7",
@@ -37,13 +38,14 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "eslint": "^9",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
-    "tailwindcss": "^4",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8",
     "typescript": "^5"
   }
 }

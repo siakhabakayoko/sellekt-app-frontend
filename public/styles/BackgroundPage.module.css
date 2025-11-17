@@ -1,0 +1,150 @@
+// styles/BackgroundPage.module.css
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #4B2A96, #FF7B54);
+  padding: 78px;
+}
+
+.mainPanel {
+  width: 1288.5px;
+  height: 868px;
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+}
+
+.rightPanel {
+  flex: 1 1 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 92px 95px;
+}
+
+@media (max-width: 968px) {
+  .mainPanel {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .rightPanel {
+    padding: 20px;
+  }
+}
+
+// pages/BackgroundPage.tsx
+import styles from '../styles/BackgroundPage.module.css';
+
+const BackgroundPage: React.FC = () => {
+  return (
+    <div className={styles.container}>
+      <Squircle
+        cornerRadius={32}
+        cornerSmoothing={1}
+        style={{
+          width: '1288.5px',
+          height: '868px',
+          background: 'linear-gradient(to right, #e0eafc, #cfdef3)',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
+          display: 'flex',
+          overflow: 'visible',
+        }}
+        className={styles.mainPanel}
+      >
+        <Squircle
+          cornerRadius={32}
+          cornerSmoothing={1}
+          style={{
+            flex: '1 1 50%',
+            backgroundImage: 'url(/path-to-your-image.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            overflow: 'visible',
+          }}
+        >
+          <TestimonialsSection />
+        </Squircle>
+        <div className={styles.rightPanel}>
+          <LoginForm />
+        </div>
+      </Squircle>
+    </div>
+  );
+};
+
+// Alternative approach using styled-components
+import styled from 'styled-components';
+
+const ResponsiveContainer = styled.div`
+  width: 1288.5px;
+  height: 868px;
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+
+  @media (max-width: 968px) {
+    flex-direction: column;
+    height: auto;
+  }
+`;
+
+const ResponsiveRightPanel = styled.div`
+  flex: 1 1 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 92px 95px;
+
+  @media (max-width: 968px) {
+    padding: 20px;
+  }
+`;
+
+const BackgroundPage: React.FC = () => {
+  return (
+    <div style={{
+      width: '100%',
+      minHeight: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      background: 'linear-gradient(45deg, #4B2A96, #FF7B54)',
+      padding: '78px',
+    }}>
+      <ResponsiveContainer as={Squircle} cornerRadius={32} cornerSmoothing={1}>
+        <Squircle
+          cornerRadius={32}
+          cornerSmoothing={1}
+          style={{
+            flex: '1 1 50%',
+            backgroundImage: 'url(/path-to-your-image.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            overflow: 'visible',
+          }}
+        >
+          <TestimonialsSection />
+        </Squircle>
+        <ResponsiveRightPanel>
+          <LoginForm />
+        </ResponsiveRightPanel>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
+export default BackgroundPage;
